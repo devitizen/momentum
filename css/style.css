@@ -1,5 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    font-family: "Noto Sans", serif;
+    color: white;
+    font-size: 2.0rem;
+    text-align: center;
+}
 
 .hidden {
     display: none;
 }
-
