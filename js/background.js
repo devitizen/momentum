@@ -1,4 +1,4 @@
-const images = ["Maldives.jpg", "Rio.jpg", "Toronto.jpeg"];
+import { images } from "./data.js";
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 const imagePath = `img/${chosenImage}`;

@@ -1,10 +1,14 @@
+import { getGreeting } from './data.js';
 
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const greetingText = document.querySelector("#greeting div:first-child");
+const nameText = document.querySelector("#greeting div:last-child");
+const rename = document.querySelector("#rename");
 
 const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
+export const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
     event.preventDefault();
@@ -15,8 +19,10 @@ function onLoginSubmit(event) {
 }
 
 function paintGreeting(userName) {
-    greeting.innerText = `Hello ${userName}!`;
+    greetingText.innerText = getGreeting();
+    nameText.innerText = userName;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    rename.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUserName = localStorage.getItem(USERNAME_KEY);
@@ -27,4 +33,3 @@ if (savedUserName === null) {
 } else {
     paintGreeting(savedUserName);
 }
-
