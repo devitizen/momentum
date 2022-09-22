@@ -1,4 +1,4 @@
-import { getGreeting } from './data.js';
+import { USERNAME_KEY } from './key.js';
 
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
@@ -8,7 +8,6 @@ const nameText = document.querySelector("#greeting div:last-child");
 const rename = document.querySelector("#rename");
 
 const HIDDEN_CLASSNAME = "hidden";
-export const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
     event.preventDefault();
@@ -17,6 +16,20 @@ function onLoginSubmit(event) {
     localStorage.setItem(USERNAME_KEY, userName);
     paintGreeting(userName);
 }
+
+function getGreeting() {
+    const hours = new Date().getHours();
+    if (hours > 6 && hours < 9) {
+        return "Good Morning!";
+    } else if (hours > 12 && hours < 15) {
+        return "Good Afternoon!";
+    } else if (hours > 17 && hours < 20) {
+        return "Good Evening!";
+    } else {
+        const greetingText = ["Hello,", "How are you?"];
+        return greetingText[Math.floor(Math.random() * 2)];
+    }
+};
 
 function paintGreeting(userName) {
     greetingText.innerText = getGreeting();
@@ -33,3 +46,4 @@ if (savedUserName === null) {
 } else {
     paintGreeting(savedUserName);
 }
+

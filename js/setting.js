@@ -1,4 +1,4 @@
-import { USERNAME_KEY } from "./greetings.js";
+import { USERNAME_KEY } from "./key.js";
 
 const rename = document.querySelector("#rename");
 

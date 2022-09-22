@@ -1,13 +1,21 @@
-body {
+html, body {
     margin: 0;
-    padding: 50px;
+    height: 100%;
+}
+
+body {
     background: no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
     font-family: "Noto Sans", serif;
     color: white;
     text-align: center;
     font-size: 1.3rem;
+}
+
+.transparent {
+    min-height: 100%;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .space-between {
@@ -38,6 +46,12 @@ body {
 
 .font-italic {
     font-style: italic;
+}
+
+.quotes-style {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
 }
 
 .todo-list-style {

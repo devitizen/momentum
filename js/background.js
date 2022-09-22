@@ -1,5 +1,5 @@
-import { images } from "./data.js";
+const NUMBER_IMAGES = 10;
+const imageName = `${Math.ceil(Math.random() * NUMBER_IMAGES)}.jpg`;
+const imageURL = `url(img/${imageName})`;
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
-const imagePath = `img/${chosenImage}`;
-document.body.style.backgroundImage = `url(${imagePath})`;
+document.body.style.backgroundImage = imageURL;

@@ -5,70 +5,70 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
-        />
-        <title>Momentum</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <title>My First Page</title>
     </head>
     <body>
-        <div class="space-between">
-            <div id="weather">
-                <div class="text-left">Getting location...</div>
-                <div class="text-left"></div>
+        <div class="transparent">
+            <div class="space-between">
+                <div id="weather">
+                    <div class="text-left">Getting location...</div>
+                    <div class="text-left"></div>
+                </div>
+                <div id="clock">
+                    <div id="date"></div>
+                    <div id="time" class="text-right">00:00:00</div>
+                </div>
             </div>
-            <div id="clock">
-                <div id="date"></div>
-                <div id="time" class="text-right">00:00:00</div>
+    
+            <div class="margin-top-5">
+                <form class="hidden" id="login-form">
+                    <input
+                        required
+                        maxlength="50"
+                        type="text"
+                        placeholder="What is your name?"
+                        class="input-style"
+                        autofocus
+                        size="30"
+                    />
+                    <input type="submit" value="Log In" class="input-style" />
+                </form>
+                <h1 class="hidden" id="greeting">
+                    <div></div>
+                    <div></div>
+                </h1>
             </div>
-        </div>
-
-        <div class="margin-top-5">
-            <form class="hidden" id="login-form">
+    
+            <div id="quote" class="font-italic quotes-style">
+                <div></div>
+                <div></div>
+            </div>
+    
+            <form id="todo-form">
                 <input
                     required
                     maxlength="50"
                     type="text"
-                    placeholder="What is your name?"
-                    class="input-style"
-                    autofocus
-                    size="30"
+                    placeholder="Write a To-Do and Press Enter"
+                    class="input-style margin-top-5"
+                    size="37"
                 />
-                <input type="submit" value="Log In" class="input-style" />
             </form>
-            <h1 class="hidden" id="greeting">
-                <div></div>
-                <div></div>
-            </h1>
+            <ul id="todo-list" class="todo-list-style"></ul>
+    
+            <div class="text-center">
+                <input type="button" value="Reset user name" id="rename" class="button-transparent hidden" />
+            </div>
+            
+            <script src="js/background.js"></script>
+            <script src="js/clock.js"></script>
+            <script src="js/quotes.js"></script>
+            <script src="js/todo.js"></script>
+            <script src="js/weather.js" type="module"></script>
+            <script src="js/greetings.js" type="module"></script>
+            <script src="js/setting.js" type="module"></script>
         </div>
-
-        <div id="quote" class="margin-top-5 font-italic">
-            <div></div>
-            <div></div>
-        </div>
-
-        <form id="todo-form">
-            <input
-                required
-                maxlength="50"
-                type="text"
-                placeholder="Write a To-Do and Press Enter"
-                class="input-style margin-top-5"
-                size="37"
-            />
-        </form>
-        <ul id="todo-list" class="todo-list-style"></ul>
-
-        <div class="text-center">
-            <input type="button" value="Reset user name" id="rename" class="button-transparent hidden" />
-        </div>
-        
-        <script src="js/background.js" type="module"></script>
-        <script src="js/weather.js" type="module"></script>
-        <script src="js/clock.js"></script>
-        <script src="js/greetings.js" type="module"></script>
-        <script src="js/quotes.js" type="module"></script>
-        <script src="js/todo.js"></script>
-        <script src="js/setting.js" type="module"></script>
     </body>
 </html>
